@@ -60,4 +60,7 @@
     <color name="md_theme_dark_surfaceTint">#DCC800</color>
     <color name="md_theme_dark_outlineVariant">#4A473A</color>
     <color name="md_theme_dark_scrim">#000000</color>
+
+    <color name="mork_borg_yellow">#FFE900</color>
+    <color name="mork_borg_pink">#FF3EB5</color>
 </resources>
