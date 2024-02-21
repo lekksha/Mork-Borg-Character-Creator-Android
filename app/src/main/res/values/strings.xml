@@ -9,4 +9,56 @@
     <string name="label_armor">Armor</string>
     <string name="label_equipment">Equipment</string>
     <string name="label_silver">Silver</string>
+
+    <string-array name="random_names">
+        <item>Aerg-Tval</item>
+        <item>Agn</item>
+        <item>Arvant</item>
+        <item>Belsum</item>
+        <item>Belum</item>
+        <item>Brint</item>
+        <item>Börda</item>
+        <item>Daeru</item>
+        <item>Eldar</item>
+        <item>Felban</item>
+        <item>Gotven</item>
+        <item>Graft</item>
+        <item>Grin</item>
+        <item>Grittr</item>
+        <item>Haerü</item>
+        <item>Hargha</item>
+        <item>Harmug</item>
+        <item>Jotna</item>
+        <item>Karg</item>
+        <item>Karva</item>
+        <item>Katla</item>
+        <item>Keftar</item>
+        <item>Klort</item>
+        <item>Kratar</item>
+        <item>Kutz</item>
+        <item>Kvetin</item>
+        <item>Lygan</item>
+        <item>Margar</item>
+        <item>Merkari</item>
+        <item>Nagl</item>
+        <item>Niduk</item>
+        <item>Nifehl</item>
+        <item>Prügl</item>
+        <item>Qillnach</item>
+        <item>Risten</item>
+        <item>Svind</item>
+        <item>Theras</item>
+        <item>Therg</item>
+        <item>Torvul</item>
+        <item>Törn</item>
+        <item>Urm</item>
+        <item>Urvarg</item>
+        <item>Vagal</item>
+        <item>Vatan</item>
+        <item>Von</item>
+        <item>Vrakh</item>
+        <item>Vresi</item>
+        <item>Wemut</item>
+    </string-array>
+
 </resources>
