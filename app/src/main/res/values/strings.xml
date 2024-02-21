@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Mörk Borg Character Creator</string>
+    <string name="label_name">Name</string>
+    <string name="label_class">Class</string>
+    <string name="label_description">Description</string>
+    <string name="label_powers">Powers</string>
+    <string name="label_weapon1">Weapon 1</string>
+    <string name="label_weapon2">Weapon 2</string>
+    <string name="label_armor">Armor</string>
+    <string name="label_equipment">Equipment</string>
+    <string name="label_silver">Silver</string>
+</resources>
