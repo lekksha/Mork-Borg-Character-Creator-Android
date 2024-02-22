@@ -9,6 +9,7 @@
     <string name="label_armor">Armor</string>
     <string name="label_equipment">Equipment</string>
     <string name="label_silver">Silver</string>
+    <string name="label_omens">Omens</string>
 
     <string-array name="random_names">
         <item>Aerg-Tval</item>
