@@ -180,10 +180,10 @@
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@id/textFieldSilver"
             tools:layout_editor_absoluteX="32dp"
-            app:startIconDrawable="@drawable/ic_character_savings">
+            app:startIconDrawable="@drawable/ic_character_omens">
 
             <com.google.android.material.textfield.TextInputEditText
-                app:startIconDrawable="@drawable/ic_character_savings"
+                app:startIconDrawable="@drawable/ic_character_omens"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
