@@ -152,23 +152,52 @@
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-
-            android:id="@+id/textFieldSilver"
+        <LinearLayout
+            android:id="@+id/LinearLayoutOmensSilver"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="@string/label_silver"
-            android:orientation="vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/textFieldEquipment"
+            app:layout_constraintStart_toStartOf="@+id/textFieldEquipment"
             app:layout_constraintTop_toBottomOf="@id/textFieldEquipment"
-            tools:layout_editor_absoluteX="32dp"
-            app:startIconDrawable="@drawable/ic_character_savings">
+            android:divider="@drawable/activity_main_linear_layout_omens_silver_divider"
+            android:showDividers="middle">
 
-            <com.google.android.material.textfield.TextInputEditText
-                app:startIconDrawable="@drawable/ic_character_savings"
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/textFieldSilver"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:hint="@string/label_silver"
+                android:orientation="vertical"
+                app:startIconDrawable="@drawable/ic_character_savings"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_character_savings"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/textFieldOmens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label_omens"
+                android:orientation="vertical"
+                app:startIconDrawable="@drawable/ic_character_omens"
+                android:layout_weight="1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_character_omens"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
