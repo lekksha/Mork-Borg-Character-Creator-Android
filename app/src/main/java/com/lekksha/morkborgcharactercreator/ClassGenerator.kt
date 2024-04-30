@@ -4,29 +4,31 @@ import com.lekksha.morkborgcharactercreator.GeneratedCharacter
 abstract class ClassGenerator {
     public fun run() : GeneratedCharacter {
         val gen = GeneratedCharacter()
-        chooseClass()
-        getAbilities()
-        generateEquipment()
-        generateDescription()
-        generateStats()
-        generateArmor()
-        generateWeapon()
-        generateSilver()
-        generateHP()
-        generateOmens()
-        getPowers()
+        gen.characterClass = chooseClass()
+        gen.abilities = getAbilities()
+        gen.equipment = generateEquipment()
+        gen.description = generateDescription()
+        gen.stats = generateStats()
+        gen.armor = generateArmor()
+        gen.weapons = generateWeapon()
+        gen.silver = generateSilver()
+        gen.hp = generateHP()
+        gen.omens = generateOmens()
+        gen.powers = getPowers()
         return gen
     }
-    protected abstract fun chooseClass()
-    protected abstract fun getAbilities()
-    protected abstract fun generateEquipment()
-    protected abstract fun generateDescription()
-    protected abstract fun generateStats()
-    protected abstract fun generateArmor()
-    protected abstract fun generateWeapon()
-    protected abstract fun generateSilver()
-    protected abstract fun generateHP()
-    protected abstract fun generateOmens()
-    private fun getPowers() {}  // TODO:
+    protected abstract fun chooseClass() : String
+    protected abstract fun getAbilities() : MutableList<String>
+    protected abstract fun generateEquipment() : MutableList<String>
+    protected abstract fun generateDescription() : MutableList<String>
+    protected abstract fun generateStats() : MutableList<Int>
+    protected abstract fun generateArmor() : String
+    protected abstract fun generateWeapon() : MutableList<String>
+    protected abstract fun generateSilver() : Int
+    protected abstract fun generateHP() : Int
+    protected abstract fun generateOmens() : Int
+    protected fun getPowers() : MutableList<String> {
+        return TODO("Provide the return value")
+    }  // TODO:
 
 }
