@@ -1,14 +1,15 @@
 package com.lekksha.morkborgcharactercreator
 
 class GeneratedCharacter {
-    val description : MutableList<String> = mutableListOf<String>()
-    val characterClass : String = "0"
-    val abilities : MutableList<String> = mutableListOf<String>()
-    val stats : MutableList<String> = mutableListOf<String>()
-    val armor : String = "0"
-    val weapons : MutableList<String> = mutableListOf<String>()
-    val silver : Int = 0
-    val hp : Int = 0
-    val omens : Int = 0
-    val powers : MutableList<String> = mutableListOf<String>()
+    var description : MutableList<String> = mutableListOf<String>()
+    var characterClass : String = "0"
+    var abilities : MutableList<String> = mutableListOf<String>()
+    var stats : MutableList<Int> = mutableListOf<Int>()
+    var armor : String = "0"
+    var weapons : MutableList<String> = mutableListOf<String>()
+    var equipment : MutableList<String> = mutableListOf<String>()
+    var silver : Int = 0
+    var hp : Int = 0
+    var omens : Int = 0
+    var powers : MutableList<String> = mutableListOf<String>()
 }
