@@ -1,4 +1,5 @@
 package com.lekksha.morkborgcharactercreator
+import android.content.Context
 import com.lekksha.morkborgcharactercreator.GeneratedCharacter
 
 abstract class ClassGenerator {
@@ -17,8 +18,13 @@ abstract class ClassGenerator {
         gen.powers = getPowers()
         return gen
     }
-    protected abstract fun chooseClass() : String
+
+    protected fun chooseClass(context: Context) : String {
+        return context.resources.getStringArray(R.array.classes)[0]
+    }
+
     protected abstract fun getAbilities() : MutableList<String>
+
     protected abstract fun generateEquipment() : MutableList<String>
     protected abstract fun generateDescription() : MutableList<String>
     protected abstract fun generateStats() : MutableList<Int>

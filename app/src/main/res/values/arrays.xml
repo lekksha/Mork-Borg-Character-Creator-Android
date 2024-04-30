@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="classes">
+        <item>Nobody</item>
+        <item>Fanged deserter</item>
+        <item>Gutter born scum</item>
+        <item>Esoteric hermit</item>
+        <item>Wretched royalty</item>
+        <item>Heretical priest</item>
+        <item>Occult herbmaster</item>
+    </string-array>
+</resources>
