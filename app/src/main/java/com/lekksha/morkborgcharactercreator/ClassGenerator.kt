@@ -26,8 +26,24 @@ abstract class ClassGenerator {
 
     protected abstract fun generateEquipment() : MutableList<String>
     protected abstract fun generateDescription() : MutableList<String>
-    protected abstract fun generateStats() : MutableList<Int>
-    protected abstract fun generateArmor() : String
+   /* TODO: Generation of stats requires users selection of two out of three ability scores */
+    protected fun generateStats() : List<Int> {
+       var summator = 0
+       val strength = regularStatGenerator()
+       val agility = regularStatGenerator()
+       val presence = regularStatGenerator()
+       val toughness = regularStatGenerator()
+       return listOf<Int>(strength, agility, presence, toughness)
+    }
+
+    private fun regularStatGenerator() : Int {
+        var sum = 0
+        repeat(3) {
+            sum += (1..6).random()
+        }
+        return sum
+        }
+    }
     protected fun generateArmor(context: Context) : String {    // TODO fix generation with scrolls
         return context.resources.getStringArray(R.array.armor).random()
     }
