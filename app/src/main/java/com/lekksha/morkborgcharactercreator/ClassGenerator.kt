@@ -22,7 +22,9 @@ abstract class ClassGenerator {
         return context.resources.getStringArray(R.array.classes)[0]
     }
 
-    protected abstract fun getAbilities() : MutableList<String>
+    protected fun getAbilities() : MutableList<String> {
+        return mutableListOf("None")
+    }
 
     protected abstract fun generateEquipment() : MutableList<String>
     protected abstract fun generateDescription() : MutableList<String>
