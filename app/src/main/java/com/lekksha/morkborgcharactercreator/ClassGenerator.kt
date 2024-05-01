@@ -1,11 +1,10 @@
 package com.lekksha.morkborgcharactercreator
 import android.content.Context
-import com.lekksha.morkborgcharactercreator.GeneratedCharacter
 
 abstract class ClassGenerator {
-    public fun run() : GeneratedCharacter {
+    public fun run(context: Context) : GeneratedCharacter {
         val gen = GeneratedCharacter()
-        gen.characterClass = chooseClass()
+        gen.characterClass = chooseClass(context)
         gen.abilities = getAbilities()
         gen.equipment = generateEquipment()
         gen.description = generateDescription()
@@ -29,6 +28,9 @@ abstract class ClassGenerator {
     protected abstract fun generateDescription() : MutableList<String>
     protected abstract fun generateStats() : MutableList<Int>
     protected abstract fun generateArmor() : String
+    protected fun generateArmor(context: Context) : String {    // TODO fix generation with scrolls
+        return context.resources.getStringArray(R.array.armor).random()
+    }
     protected abstract fun generateWeapon() : MutableList<String>
     protected abstract fun generateSilver() : Int
     protected abstract fun generateHP() : Int
