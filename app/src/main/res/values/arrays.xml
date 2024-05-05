@@ -17,4 +17,5 @@
         <item>medium armor (scale, mail -d4 damage, tier 2) DR +2 on Agility tests including defence.</item>
         <item>heavy armor (splint, plate etc, -d6 damage, tier 3) DR +4 on Agility tests, defence is DR +2.</item>
     </string-array>
+    <string-array name="containers">string</string-array>
 </resources>

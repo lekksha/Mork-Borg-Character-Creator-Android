@@ -45,9 +45,16 @@ abstract class ClassGenerator {
         return res
     }
 
+    private fun generateContainer(context : Context): MutableList<String> {
+        val containerIndex = Random.nextInt(0, context.resources.getStringArray(R.array.containers).size)     // TODO: create an option to select "above" variants of containers
+        if (containerIndex !in 0..1)
+            return mutableListOf<String>() // Also can returns only in case
+        else return mutableListOf(context.resources.getStringArray(R.array.containers)[containerIndex])
+    }
+
     protected abstract fun generateDescription() : MutableList<String>
    /* TODO: Generation of stats requires users selection of two out of three ability scores */
-    protected fun generateStats() : List<Int> {
+    protected fun generateStats() : MutableList<Int> {
        var summator = 0
        val strength = regularStatGenerator()
        val agility = regularStatGenerator()
