@@ -26,7 +26,16 @@ abstract class ClassGenerator {
         return mutableListOf("None")
     }
 
-    protected abstract fun generateEquipment() : MutableList<String>
+    protected fun generateEquipment(context : Context) : MutableList<String> {
+        val equipment = mutableListOf<String>()
+        equipment.addAll(generateFood(context))  // TODO: create an option to generate food and drinks separately
+        equipment.addAll(generateContainer(context))
+        equipment.add(generateSecondItem())
+        equipment.add(generateThirdItem())
+        return equipment
+    }
+
+
     protected abstract fun generateDescription() : MutableList<String>
    /* TODO: Generation of stats requires users selection of two out of three ability scores */
     protected fun generateStats() : List<Int> {
