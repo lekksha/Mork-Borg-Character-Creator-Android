@@ -1,5 +1,6 @@
 package com.lekksha.morkborgcharactercreator
 import android.content.Context
+import kotlin.random.Random
 
 abstract class ClassGenerator {
     public fun run(context: Context) : GeneratedCharacter {
@@ -35,6 +36,14 @@ abstract class ClassGenerator {
         return equipment
     }
 
+    private fun generateFood(context: Context): MutableList<String> {
+        val res = mutableListOf<String>()
+        val food = context.resources.getString(R.string.daily_rations) + ": " + Random.nextInt(1,5)
+        res.add(food)
+        val waterskin = context.resources.getString(R.string.waterskin)
+        res.add(waterskin)
+        return res
+    }
 
     protected abstract fun generateDescription() : MutableList<String>
    /* TODO: Generation of stats requires users selection of two out of three ability scores */
