@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array
-        name="classes">
+    <string-array name="classes">
         <item>Nobody</item>
         <item>Fanged deserter</item>
         <item>Gutter born scum</item>
@@ -10,8 +9,7 @@
         <item>Heretical priest</item>
         <item>Occult herbmaster</item>
     </string-array>
-    <string-array
-        name="armor">
+    <string-array name="armor">
         <item>no armor (tier 0)</item>
         <item>light (fur,padded cloth, leather etc, -d2 damage, tier 1)</item>
         <item>medium armor (scale, mail -d4 damage, tier 2) DR +2 on Agility tests including defence.</item>

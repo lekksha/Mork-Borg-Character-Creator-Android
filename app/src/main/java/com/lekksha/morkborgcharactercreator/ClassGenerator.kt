@@ -7,7 +7,7 @@ abstract class ClassGenerator {
         val gen = GeneratedCharacter()
         gen.characterClass = chooseClass(context)
         gen.abilities = getAbilities()
-        gen.equipment = generateEquipment()
+        gen.equipment = generateEquipment(context)
         gen.description = generateDescription()
         gen.stats = generateStats()
         gen.armor = generateArmor()
@@ -60,7 +60,7 @@ abstract class ClassGenerator {
        val agility = regularStatGenerator()
        val presence = regularStatGenerator()
        val toughness = regularStatGenerator()
-       return listOf<Int>(strength, agility, presence, toughness)
+       return mutableListOf<Int>(strength, agility, presence, toughness)
     }
 
     private fun regularStatGenerator() : Int {
