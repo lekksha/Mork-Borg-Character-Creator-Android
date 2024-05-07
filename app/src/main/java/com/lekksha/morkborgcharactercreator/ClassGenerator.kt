@@ -3,6 +3,8 @@ import android.content.Context
 import kotlin.random.Random
 
 abstract class ClassGenerator {
+    protected var hasScroll: Boolean = false
+
     fun run(context: Context) : GeneratedCharacter {
         val gen = GeneratedCharacter()
         gen.characterClass = chooseClass(context)
@@ -10,7 +12,7 @@ abstract class ClassGenerator {
         gen.stats = generateStats()
         gen.equipment = generateEquipment(context, gen.stats[2])
         gen.description = generateDescription()
-        gen.armor = generateArmor()
+        gen.armor = generateArmor(context)
         gen.weapons = generateWeapon()
         gen.silver = generateSilver()
         gen.hp = generateHP(gen.stats[3])
@@ -64,6 +66,7 @@ abstract class ClassGenerator {
                 return context.resources.getStringArray(R.array.second_items)[secondItemIndex] + " " + (statPresence + 6).toString()
             }
             4 -> {
+                hasScroll = true
                 return context.resources.getString(R.string.unclean_scroll) + ": " +
                         context.resources.getStringArray(R.array.unclean_scrolls)[Random.nextInt(
                             0,
@@ -88,6 +91,7 @@ abstract class ClassGenerator {
         when (thirdItemIndex) {
             0 -> return context.resources.getStringArray(R.array.third_items)[thirdItemIndex] + " " + Random.nextInt(1, 4+1).toString()
             1 -> {
+                hasScroll = true
                 return context.resources.getString(R.string.sacred_scroll) + ": " +
                         context.resources.getStringArray(R.array.sacred_scrolls)[Random.nextInt(
                             0,
@@ -135,6 +139,9 @@ abstract class ClassGenerator {
 
 
     protected fun generateArmor(context: Context) : String {    // TODO fix generation with scrolls
+        if (hasScroll) {
+            context.resources.getStringArray(R.array.armor)[Random.nextInt(0,2)]
+        }
         return context.resources.getStringArray(R.array.armor).random()
     }
 
