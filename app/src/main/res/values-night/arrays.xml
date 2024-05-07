@@ -23,4 +23,19 @@
         <item>small wagon</item>
         <item>donkey</item>
     </string-array>
+    <string-array
+        name="second_items">
+        <item>rope 30 feet</item>
+        <item>Presence + 4 torches</item>
+        <item>lantern with oil for Presence + 6 hours</item>
+        <item>magnesium strip</item>
+        <item>random unclean scroll</item>
+        <item>sharp needle</item>
+        <item>medicine chest Presence+4 uses (stops bleeding/infection and heals d6 HP)</item>
+        <item>metal file and lockpicks</item>
+        <item>bear trap (Presence DR14 to spot, d8 damage)</item>
+        <item>bomb (sealed bottle, d10 damage)</item>
+        <item>a bottle of red poison d4 doses (Toughness DR12 or d10 damage)</item>
+        <item>silver crucifix</item>
+    </string-array>
 </resources>
