@@ -91,5 +91,18 @@
         <item>Roskoe’s Consuming Glare</item>
         <item>Enochian Syntax</item>
     </string-array>
+    <string-array
+        name="weapons">
+        <item>Femur (d4)</item>
+        <item>Staff (d4)</item>
+        <item>Shortsword (d4)</item>
+        <item>Knife (d4)</item>
+        <item>Warhammer (d6)</item>
+        <item>Sword (d6)</item>
+        <item>Bow (d6). Arrows left:</item>
+        <item>Flail (d8)</item>
+        <item>Crossbow (d8). Bolts left:</item>
+        <item>Zweihänder (d10)</item>
+    </string-array>
 
 </resources>

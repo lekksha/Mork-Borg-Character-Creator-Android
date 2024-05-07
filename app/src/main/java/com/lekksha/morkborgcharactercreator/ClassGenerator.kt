@@ -13,7 +13,7 @@ abstract class ClassGenerator {
         gen.equipment = generateEquipment(context, gen.stats[2])
         gen.description = generateDescription()
         gen.armor = generateArmor(context)
-        gen.weapons = generateWeapon()
+        gen.weapons = generateWeapon(context, gen.stats[2])
         gen.silver = generateSilver()
         gen.hp = generateHP(gen.stats[3])
         gen.omens = generateOmens()
@@ -140,13 +140,22 @@ abstract class ClassGenerator {
 
     protected fun generateArmor(context: Context) : String {    // TODO fix generation with scrolls
         if (hasScroll) {
-            context.resources.getStringArray(R.array.armor)[Random.nextInt(0,2)]
+            return context.resources.getStringArray(R.array.armor)[Random.nextInt(0,2)]
         }
-        return context.resources.getStringArray(R.array.armor).random()
+        else return context.resources.getStringArray(R.array.armor)[Random.nextInt(0,4)]
     }
 
 
-    protected abstract fun generateWeapon() : MutableList<String>
+    protected fun generateWeapon(context: Context, statPresence: Int) : MutableList<String> {
+        val res = mutableListOf<String>()
+        val weaponIndex = if (hasScroll) Random.nextInt(0,6) else Random.nextInt(0,10)
+        when (weaponIndex) {
+            6 -> res.add(context.resources.getStringArray(R.array.weapons)[weaponIndex] + " " + (10 + statPresence))
+            8 -> res.add(context.resources.getStringArray(R.array.weapons)[weaponIndex] + " " + (10 + statPresence))
+            else -> res.add(context.resources.getStringArray(R.array.weapons)[weaponIndex])
+        }
+        return res
+    }
 
 
     protected fun generateSilver() : Int {
