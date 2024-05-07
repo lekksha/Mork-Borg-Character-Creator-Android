@@ -142,7 +142,9 @@ abstract class ClassGenerator {
     protected abstract fun generateWeapon() : MutableList<String>
 
 
-    protected abstract fun generateSilver() : Int
+    protected fun generateSilver() : Int {
+        return ( Random.nextInt(1, 6+1) + Random.nextInt(1, 6+1) ) * 10
+    }
 
 
     protected fun generateHP(statToughness: Int) : Int {
