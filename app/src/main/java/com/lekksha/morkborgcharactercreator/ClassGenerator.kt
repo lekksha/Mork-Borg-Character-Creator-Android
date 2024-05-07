@@ -13,7 +13,7 @@ abstract class ClassGenerator {
         gen.armor = generateArmor()
         gen.weapons = generateWeapon()
         gen.silver = generateSilver()
-        gen.hp = generateHP()
+        gen.hp = generateHP(gen.stats[3])
         gen.omens = generateOmens()
         gen.powers = getPowers()
         return gen
@@ -131,8 +131,12 @@ abstract class ClassGenerator {
 
 
     protected abstract fun generateSilver() : Int
-    protected abstract fun generateHP() : Int
 
+
+    protected fun generateHP(statToughness: Int) : Int {
+        val hp = Random.nextInt(1, 8 + 1) + statToughness
+        return if (hp < 1) 1 else hp
+    }
 
 
     protected abstract fun generateOmens() : Int
