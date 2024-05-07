@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="classes">
+        <item>Nobody</item>
+        <item>Fanged deserter</item>
+        <item>Gutter born scum</item>
+        <item>Esoteric hermit</item>
+        <item>Wretched royalty</item>
+        <item>Heretical priest</item>
+        <item>Occult herbmaster</item>
+    </string-array>
+    <string-array name="armor">
+        <item>no armor (tier 0)</item>
+        <item>light (fur,padded cloth, leather etc, -d2 damage, tier 1)</item>
+        <item>medium armor (scale, mail -d4 damage, tier 2) DR +2 on Agility tests including defence.</item>
+        <item>heavy armor (splint, plate etc, -d6 damage, tier 3) DR +4 on Agility tests, defence is DR +2.</item>
+    </string-array>
+    <string-array name="containers">
+        <item>nothing</item>
+        <item>nothing</item>
+        <item>backpack for 7 normal-sized items</item>
+        <item>sack for 10 normal-sized items</item>
+        <item>small wagon</item>
+        <item>donkey</item>
+    </string-array>
+    <string-array
+        name="second_items">
+        <item>rope 30 feet</item>
+        <item>Presence + 4 torches</item>
+        <item>lantern with oil for Presence + 6 hours</item>
+        <item>magnesium strip</item>
+        <item>random unclean scroll</item>
+        <item>sharp needle</item>
+        <item>medicine chest Presence+4 uses (stops bleeding/infection and heals d6 HP)</item>
+        <item>metal file and lockpicks</item>
+        <item>bear trap (Presence DR14 to spot, d8 damage)</item>
+        <item>bomb (sealed bottle, d10 damage)</item>
+        <item>a bottle of red poison d4 doses (Toughness DR12 or d10 damage)</item>
+        <item>silver crucifix</item>
+    </string-array>
+    <string-array
+        name="weapons">
+        <item>Femur (d4)</item>
+        <item>Staff (d4)</item>
+        <item>Shortsword (d4)</item>
+        <item>Knife (d4)</item>
+        <item>Warhammer (d6)</item>
+        <item>Sword (d6)</item>
+        <item>Bow (d6). Arrows left:</item>
+        <item>Flail (d8)</item>
+        <item>Crossbow (d8). Bolts left:</item>
+        <item>Zweihänder (d10)</item>
+    </string-array>
+</resources>

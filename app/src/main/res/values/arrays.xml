@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="classes">
+        <item>Nobody</item>
+        <item>Fanged deserter</item>
+        <item>Gutter born scum</item>
+        <item>Esoteric hermit</item>
+        <item>Wretched royalty</item>
+        <item>Heretical priest</item>
+        <item>Occult herbmaster</item>
+    </string-array>
+    <string-array
+        name="armor">
+        <item>no armor (tier 0)</item>
+        <item>light (fur,padded cloth, leather etc, -d2 damage, tier 1)</item>
+        <item>medium armor (scale, mail -d4 damage, tier 2) DR +2 on Agility tests including defence.</item>
+        <item>heavy armor (splint, plate etc, -d6 damage, tier 3) DR +4 on Agility tests, defence is DR +2.</item>
+    </string-array>
+    <string-array name="containers">
+        <item>nothing</item>
+        <item>nothing</item>
+        <item>backpack for 7 normal-sized items</item>
+        <item>sack for 10 normal-sized items</item>
+        <item>small wagon</item>
+        <item>donkey</item>
+    </string-array>
+    <string-array
+        name="second_items">
+        <item>rope 30 feet</item>
+        <item>torches</item>
+        <item>lantern with oil. Hours of fuel left:</item>
+        <item>magnesium strip</item>
+        <item>random unclean scroll</item>
+        <item>sharp needle</item>
+        <item>medicine chest (stops bleeding/infection and heals d6 HP). Uses left:</item>
+        <item>metal file and lockpicks</item>
+        <item>bear trap (Presence DR14 to spot, d8 damage)</item>
+        <item>bomb (sealed bottle, d10 damage)</item>
+        <item>a bottle of red poison (Toughness DR12 or d10 damage). Doses left:</item>
+        <item>silver crucifix</item>
+    </string-array>
+    <string name="second_items_hours">hours</string>
+
+    <string-array
+        name="third_items">
+        <item>life elixir (heals d6 HP and removes infection). Doses left:</item>
+        <item>random sacred scroll</item>
+        <item>small but vicious dog (d6+2 HP, bite d4, only obeys you)</item>
+        <item>d4 monkeys that ignore but love you (d4+2 HP, punch/bite d4)</item>
+        <item>exquisite perfume worth 25s</item>
+        <item>toolbox 10 nails, tongs, hammer, small saw and drill:</item>
+        <item>heavy chain 15 feet</item>
+        <item>grappling hook</item>
+        <item>shield (-1 HP damage or have the shield break to ignore one attack)</item>
+        <item>crowbar (d4 damage)</item>
+        <item>lard (may function as 5 meals in a pinch)</item>
+        <item>tent</item>
+    </string-array>
+    <string name="vicious_dog_p1">small but vicious dog (</string>
+    <string name="vicious_dog_p2"> HP, bite d4, only obeys you)</string>
+    <string name="monkeys_p1"> monkeys that ignore but love you (</string>
+    <string name="monkeys_p2"> HP, punch/bite d4)</string>
+
+    <string name="unclean_scroll">unclean scroll</string>>
+    <string-array
+        name="unclean_scrolls">
+        <item>Palms Open the Southern Gate</item>
+        <item>Tongue of Eris</item>
+        <item>Te-le-kin-esis</item>
+        <item>Lucy-Fires Levitation</item>
+        <item>Daemon of Capillaries</item>
+        <item>Nine Violet Signs Unknot the Storm</item>
+        <item>Foul Psychopomp</item>
+        <item>Metzhuotl Blind Your Eye</item>
+        <item>Eyelid Blinds the Mind</item>
+        <item>Death</item>
+    </string-array>
+
+    <string name="sacred_scroll">sacred scroll</string>>
+    <string-array
+        name="sacred_scrolls">
+        <item>Grace of a Dead Saint</item>
+        <item>Grace for a Sinner</item>
+        <item>Whispers Pass the Gate</item>
+        <item>Aegis of Sorrow</item>
+        <item>Unmet Fate</item>
+        <item>Bestial Speech</item>
+        <item>False Dawn / Night’s Chariot</item>
+        <item>Hermetic Step</item>
+        <item>Roskoe’s Consuming Glare</item>
+        <item>Enochian Syntax</item>
+    </string-array>
+    <string-array
+        name="weapons">
+        <item>Femur (d4)</item>
+        <item>Staff (d4)</item>
+        <item>Shortsword (d4)</item>
+        <item>Knife (d4)</item>
+        <item>Warhammer (d6)</item>
+        <item>Sword (d6)</item>
+        <item>Bow (d6). Arrows left:</item>
+        <item>Flail (d8)</item>
+        <item>Crossbow (d8). Bolts left:</item>
+        <item>Zweihänder (d10)</item>
+    </string-array>
+
+</resources>

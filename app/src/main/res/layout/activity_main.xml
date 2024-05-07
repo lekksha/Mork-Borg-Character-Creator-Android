@@ -56,6 +56,7 @@
             app:startIconDrawable="@drawable/ic_character_class">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextClass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:startIconDrawable="@drawable/ic_character_class" />
@@ -93,6 +94,7 @@
             app:startIconDrawable="@drawable/ic_character_weapon1">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextWeapon1"
                 app:startIconDrawable="@drawable/ic_character_weapon1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -129,6 +131,7 @@
             app:startIconDrawable="@drawable/ic_character_armor">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextInputEditTextArmor"
                 app:startIconDrawable="@drawable/ic_character_armor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -175,6 +178,7 @@
                 android:layout_weight="1">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/TextInputEditTextSilver"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:startIconDrawable="@drawable/ic_character_savings"
@@ -192,6 +196,7 @@
                 android:layout_weight="1">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/TextInputEditTextOmens"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:startIconDrawable="@drawable/ic_character_omens"

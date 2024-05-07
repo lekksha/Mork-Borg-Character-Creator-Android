@@ -61,5 +61,8 @@
         <item>Vresi</item>
         <item>Wemut</item>
     </string-array>
+    <string name="waterskin">waterskin</string>
+    <string name="daily_rations">daily rations</string>
+
 
 </resources>
