@@ -2,22 +2,21 @@ package com.lekksha.morkborgcharactercreator
 import android.content.Context
 import kotlin.random.Random
 
-abstract class ClassGenerator {
+class ClassGenerator {
     protected var hasScroll: Boolean = false
-
     fun run(context: Context) : GeneratedCharacter {
         val gen = GeneratedCharacter()
         gen.characterClass = chooseClass(context)
         gen.abilities = getAbilities()
         gen.stats = generateStats()
         gen.equipment = generateEquipment(context, gen.stats[2])
-        gen.description = generateDescription()
+        //gen.description = generateDescription()
         gen.armor = generateArmor(context)
         gen.weapons = generateWeapon(context, gen.stats[2])
         gen.silver = generateSilver()
         gen.hp = generateHP(gen.stats[3])
         gen.omens = generateOmens()
-        gen.powers = getPowers()
+        //gen.powers = getPowers()
         return gen
     }
 
@@ -105,7 +104,7 @@ abstract class ClassGenerator {
     }
 
 
-    protected abstract fun generateDescription() : MutableList<String>
+    //protected abstract fun generateDescription() : MutableList<String>
    /* TODO: Generation of stats requires users selection of two out of three ability scores */
 
 
@@ -176,5 +175,5 @@ abstract class ClassGenerator {
 
     protected fun getPowers() : MutableList<String> {
         return TODO("Provide the return value")
-    }  // TODO:
+    }
 }

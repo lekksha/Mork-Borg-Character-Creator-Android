@@ -20,13 +20,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         changeTextViewFontToRakkas(binding.textViewName)
-        
+
         // Randomizing stuff below
 
         // Randomizes name of the character
         // TODO: Refactor to one method
 
         binding.textViewName.text = generateFromResource(R.array.random_names)
+
+        val generator = ClassGenerator()
+        val character = generator.run(this)
+        binding.TextInputEditTextClass.setText(character.characterClass)
+        binding.TextInputEditTextArmor.setText(character.armor)
+        binding.TextInputEditTextSilver.setText(character.silver.toString())
+        binding.TextInputEditTextOmens.setText(character.omens.toString())
+        binding.TextInputEditTextWeapon1.setText(character.weapons[0])
+
     }
 
     private fun changeTextViewFontToRakkas(textView: TextView) {
