@@ -119,7 +119,18 @@ abstract class ClassGenerator {
         repeat(3) {
             sum += (1..6).random()
         }
-        return sum
+        var res = 0
+        when (sum) {
+            in 1..4 -> res = -3
+            in 5..6 -> res = -2
+            in 7..8 -> res = -1
+            in 9..12 -> res = 0
+            in 13 .. 14 -> res = 1
+            in 15..16 -> res = 2
+            in 17..20 -> res = 3
+            else -> throw Exception("Trouble generating stats: Sum is not in the range")
+        }
+        return res
     }
 
 
