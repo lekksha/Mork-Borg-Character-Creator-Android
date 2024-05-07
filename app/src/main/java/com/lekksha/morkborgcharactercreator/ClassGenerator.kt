@@ -32,7 +32,7 @@ abstract class ClassGenerator {
         equipment.addAll(generateFood(context))  // TODO: create an option to generate food and drinks separately
         equipment.addAll(generateContainer(context))
         equipment.add(generateSecondItem(context, statPresence))
-        equipment.add(generateThirdItem())
+        equipment.add(generateThirdItem(context))
         return equipment
     }
 
@@ -55,13 +55,13 @@ abstract class ClassGenerator {
 
 
     private fun generateSecondItem(context: Context, statPresence : Int): String {
-        val containerIndex = Random.nextInt(0, context.resources.getStringArray(R.array.second_items).size)     // TODO: create an option to select "above" variants of containers
-        when (containerIndex) {
+        val secondItemIndex = Random.nextInt(0, context.resources.getStringArray(R.array.second_items).size)     // TODO: create an option to select "above" variants of containers
+        when (secondItemIndex) {
             1 -> {
-                return (statPresence + 4).toString() + " " + context.resources.getStringArray(R.array.second_items)[containerIndex]
+                return (statPresence + 4).toString() + " " + context.resources.getStringArray(R.array.second_items)[secondItemIndex]
             }
             2 -> {
-                return context.resources.getStringArray(R.array.second_items)[containerIndex] + " " + (statPresence + 6).toString()
+                return context.resources.getStringArray(R.array.second_items)[secondItemIndex] + " " + (statPresence + 6).toString()
             }
             4 -> {
                 return context.resources.getString(R.string.unclean_scroll) + ": " +
@@ -71,23 +71,33 @@ abstract class ClassGenerator {
                         )]
             }
             6 -> {
-                return context.resources.getStringArray(R.array.second_items)[containerIndex] + " " + (statPresence + 4).toString()
+                return context.resources.getStringArray(R.array.second_items)[secondItemIndex] + " " + (statPresence + 4).toString()
             }
             10 -> {
-                return context.resources.getStringArray(R.array.second_items)[containerIndex] + " " + Random.nextInt(1, 4+1).toString()
+                return context.resources.getStringArray(R.array.second_items)[secondItemIndex] + " " + Random.nextInt(1, 4+1).toString()
             }
             else -> {
-                return context.resources.getStringArray(R.array.second_items)[containerIndex]
+                return context.resources.getStringArray(R.array.second_items)[secondItemIndex]
             }
-        //        if (containerIndex !in 0..1)
-//            return mutableListOf<String>() // Also can returns only in case
-//        else return mutableListOf(context.resources.getStringArray(R.array.containers)[containerIndex])
         }
     }
 
 
-    private fun generateThirdItem(): String {
-
+    private fun generateThirdItem(context: Context): String {
+        val thirdItemIndex = Random.nextInt(0, context.resources.getStringArray(R.array.third_items).size)     // TODO: create an option to select "above" variants of containers
+        when (thirdItemIndex) {
+            0 -> return context.resources.getStringArray(R.array.third_items)[thirdItemIndex] + " " + Random.nextInt(1, 4+1).toString()
+            1 -> {
+                return context.resources.getString(R.string.sacred_scroll) + ": " +
+                        context.resources.getStringArray(R.array.sacred_scrolls)[Random.nextInt(
+                            0,
+                            context.resources.getStringArray(R.array.sacred_scrolls).size
+                        )]
+            }
+            2 -> return context.resources.getString(R.string.vicious_dog_p1) + (Random.nextInt(1, 6 + 1) + 2).toString() + context.resources.getString(R.string.vicious_dog_p2)
+            3 -> return Random.nextInt(1, 4 + 1).toString() + R.string.monkeys_p1 + (Random.nextInt(1, 6 + 1) + 2).toString() + R.string.monkeys_p2
+            else -> return context.resources.getStringArray(R.array.third_items)[thirdItemIndex]
+        }
     }
 
 
@@ -110,15 +120,25 @@ abstract class ClassGenerator {
         return sum
         }
     }
+
+
     protected fun generateArmor(context: Context) : String {    // TODO fix generation with scrolls
         return context.resources.getStringArray(R.array.armor).random()
     }
+
+
     protected abstract fun generateWeapon() : MutableList<String>
+
+
     protected abstract fun generateSilver() : Int
     protected abstract fun generateHP() : Int
+
+
+
     protected abstract fun generateOmens() : Int
+
+
     protected fun getPowers() : MutableList<String> {
         return TODO("Provide the return value")
     }  // TODO:
-
 }
