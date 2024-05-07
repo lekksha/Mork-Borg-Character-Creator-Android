@@ -140,7 +140,9 @@ abstract class ClassGenerator {
     }
 
 
-    protected abstract fun generateOmens() : Int
+    protected fun generateOmens() : Int {
+        return Random.nextInt(1, 2+1)
+    }
 
 
     protected fun getPowers() : MutableList<String> {
