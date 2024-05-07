@@ -3,7 +3,7 @@ import android.content.Context
 import kotlin.random.Random
 
 abstract class ClassGenerator {
-    public fun run(context: Context) : GeneratedCharacter {
+    fun run(context: Context) : GeneratedCharacter {
         val gen = GeneratedCharacter()
         gen.characterClass = chooseClass(context)
         gen.abilities = getAbilities()
@@ -103,6 +103,8 @@ abstract class ClassGenerator {
 
     protected abstract fun generateDescription() : MutableList<String>
    /* TODO: Generation of stats requires users selection of two out of three ability scores */
+
+
     protected fun generateStats() : MutableList<Int> {
        var summator = 0
        val strength = regularStatGenerator()
@@ -118,7 +120,6 @@ abstract class ClassGenerator {
             sum += (1..6).random()
         }
         return sum
-        }
     }
 
 
