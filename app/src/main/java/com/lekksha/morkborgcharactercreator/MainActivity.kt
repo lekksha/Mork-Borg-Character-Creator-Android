@@ -21,19 +21,19 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        putUpCharacterName()    // character is not being generated in method below
-        putUpGeneratedCharacter(ClassGenerator().run(this))
-        addPlusDescriptionButton()
-
-
-    }
-
-    private fun putUpCharacterName() {
         changeTextViewFontToRakkas(binding.textViewName)
         binding.textViewName.text = generateFromResource(R.array.random_names)
+
+        putUpGeneratedCharacter(ClassGenerator().run(this))
+        addAddDescriptionButton()
+
+        binding.textViewName.setOnClickListener {
+            binding.textViewName.text = generateFromResource(R.array.random_names)
+            putUpGeneratedCharacter(ClassGenerator().run(this))
+        }
     }
 
-    private fun addPlusDescriptionButton() {
+    private fun addAddDescriptionButton() {
         val button = createAddDescriptionButton()
         binding.linearLayoutDiscription.addView(button)
         button.setOnClickListener {
