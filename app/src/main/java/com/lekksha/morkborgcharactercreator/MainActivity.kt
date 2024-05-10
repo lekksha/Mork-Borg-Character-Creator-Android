@@ -1,67 +1,87 @@
 package com.lekksha.morkborgcharactercreator
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.annotation.ArrayRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 import com.lekksha.morkborgcharactercreator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private fun generateFromResource(resource: Int): String {
-        val names = resources.getStringArray(resource)
-        return names.random();
-    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
+        putUpCharacterName()    // character is not being generated in method below
+        putUpGeneratedCharacter(ClassGenerator().run(this))
+        addPlusDescriptionButton()
+
+
+    }
+
+    private fun putUpCharacterName() {
         changeTextViewFontToRakkas(binding.textViewName)
-
-        // Randomizing stuff below
-
-        // Randomizes name of the character
-        // TODO: Refactor to one method
-
         binding.textViewName.text = generateFromResource(R.array.random_names)
+    }
 
-        val generator = ClassGenerator()
-        val character = generator.run(this)
+    private fun addPlusDescriptionButton() {
+        val button = createAddDescriptionButton()
+        binding.linearLayoutDiscription.addView(button)
+        button.setOnClickListener {
+            val textInputLayout = createDescriptionField()
+
+            binding.linearLayoutDiscription.removeView(button)
+            binding.linearLayoutDiscription.addView(textInputLayout)
+            binding.linearLayoutDiscription.addView(button)
+        }
+    }
+
+
+    private fun generateFromResource(resource: Int): String {
+        val names = resources.getStringArray(resource)
+        return names.random();
+    }
+
+
+    private fun putUpGeneratedCharacter(character: GeneratedCharacter) {
         binding.TextInputEditTextClass.setText(character.characterClass)
         binding.TextInputEditTextArmor.setText(character.armor)
         binding.TextInputEditTextSilver.setText(character.silver.toString())
         binding.TextInputEditTextOmens.setText(character.omens.toString())
         binding.TextInputEditTextWeapon1.setText(character.weapons[0])
+    }
 
+
+    private fun createAddDescriptionButton(): MaterialButton {
         val button = MaterialButton(this, null, com.google.android.material.R.attr.materialIconButtonStyle)
-        //val button = Button()
-        button.text = "Add discription field"
+        button.text = "Add description fact"
         button.setIconResource(R.drawable.ic_add_24)
-        button.setOnClickListener {
-            // Create new EditText
-            val editText = EditText(this)
-            editText.layoutParams = LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            )
+        return button
+    }
 
-            // Add EditText to LinearLayout
-            binding.linearLayoutDiscription.addView(editText)
-
-            // Remove Button from LinearLayout
-            binding.linearLayoutDiscription.removeView(button)
-
-            // Add Button to LinearLayout
-            binding.linearLayoutDiscription.addView(button)
-        }
-        binding.linearLayoutDiscription.addView(button)
+    private fun createDescriptionField(): TextInputLayout {
+        val textInputLayout = TextInputLayout(this)
+        textInputLayout.layoutParams = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        )
+        //textInputLayout.hint = "Description fact"
+        val textInputEditText = TextInputEditText(textInputLayout.context)
+        textInputEditText.layoutParams = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        )
+        textInputLayout.addView(textInputEditText)
+        return textInputLayout
     }
 
     private fun changeTextViewFontToRakkas(textView: TextView) {
