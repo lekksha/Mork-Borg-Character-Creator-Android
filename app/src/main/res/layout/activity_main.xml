@@ -159,23 +159,30 @@
                 android:layout_height="wrap_content" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-
-            android:id="@+id/textFieldEquipment"
+        <LinearLayout
+            android:id="@+id/linearLayoutEquipment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="@string/label_equipment"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@id/textFieldArmor"
-            tools:layout_editor_absoluteX="32dp"
-            app:startIconDrawable="@drawable/ic_character_equipment">
+            >
 
-            <com.google.android.material.textfield.TextInputEditText
-                app:startIconDrawable="@drawable/ic_character_equipment"
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/textFieldEquipment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/label_equipment"
+                android:orientation="vertical"
+                app:startIconDrawable="@drawable/ic_character_equipment">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_character_equipment" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/LinearLayoutOmensSilver"
@@ -183,11 +190,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="@+id/textFieldEquipment"
-            app:layout_constraintStart_toStartOf="@+id/textFieldEquipment"
-            app:layout_constraintTop_toBottomOf="@id/textFieldEquipment"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayoutEquipment"
+            app:layout_constraintStart_toStartOf="@+id/linearLayoutEquipment"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutEquipment"
             android:divider="@drawable/activity_main_linear_layout_omens_silver_divider"
-            android:showDividers="middle">
+            android:showDividers="middle"
+            android:baselineAligned="false">
 
             <com.google.android.material.textfield.TextInputLayout
 

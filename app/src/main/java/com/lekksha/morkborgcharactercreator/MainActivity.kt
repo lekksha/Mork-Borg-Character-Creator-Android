@@ -28,11 +28,24 @@ class MainActivity : AppCompatActivity() {
         putUpGeneratedCharacter(ClassGenerator().run(this))
         addAddDescriptionButton()   // TODO: Refactor insides of the function
         addAddPowerButton()
+        addAddEquipmentButton()
 
         binding.textViewName.setOnClickListener {
             binding.textViewName.text = generateFromResource(R.array.random_names)
             putUpGeneratedCharacter(ClassGenerator().run(this))
         }
+    }
+
+    private fun addAddEquipmentButton() {
+        val buttonAddPower = createAddEquipmentButton()
+        addAddTextFieldFunctionalityToButton(buttonAddPower, binding.linearLayoutEquipment)
+    }
+
+    private fun createAddEquipmentButton(): MaterialButton {
+        val button = MaterialButton(this, null, com.google.android.material.R.attr.materialIconButtonStyle)
+        button.text = "Add Equipment"
+        button.setIconResource(R.drawable.ic_add_24)
+        return button
     }
 
     private fun addAddPowerButton() {
