@@ -63,6 +63,7 @@
     </string-array>
     <string name="waterskin">waterskin</string>
     <string name="daily_rations">daily rations</string>
+    <string name="delete_field">Delete field</string>
 
 
 </resources>

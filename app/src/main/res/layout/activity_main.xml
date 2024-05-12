@@ -71,23 +71,31 @@
                 app:startIconDrawable="@drawable/ic_character_class" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-
-            android:id="@+id/textFieldPowers"
+        <LinearLayout
+            android:id="@+id/LinearLayoutPowers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="@string/label_powers"
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@id/textFieldClass"
-            app:startIconDrawable="@drawable/ic_character_powers"
-            tools:layout_editor_absoluteX="32dp">
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="32dp">
 
-            <com.google.android.material.textfield.TextInputEditText
-                app:startIconDrawable="@drawable/ic_character_powers"
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/textFieldPowers"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/label_powers"
+                android:orientation="vertical"
+                app:startIconDrawable="@drawable/ic_character_powers">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:startIconDrawable="@drawable/ic_character_powers" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
 
@@ -98,7 +106,7 @@
             android:layout_marginTop="24dp"
             android:hint="@string/label_weapon1"
             android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/textFieldPowers"
+            app:layout_constraintTop_toBottomOf="@id/LinearLayoutPowers"
             tools:layout_editor_absoluteX="32dp"
             app:startIconDrawable="@drawable/ic_character_weapon1">
 
